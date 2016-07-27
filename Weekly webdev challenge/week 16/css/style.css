@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: 'PT Sans', sans-serif;
+  color: white; }
+
+header {
+  background: url("../img/header.jpg") no-repeat center top;
+  background-size: cover;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  padding-bottom: 10vh;
+  flex-direction: column;
+  justify-content: space-between; }
+  header h1 {
+    margin-top: 30vh;
+    text-transform: uppercase;
+    padding: 0 10vw 0 5vw;
+    text-shadow: 3px 3px 10px green; }
+  header p {
+    padding: 0 5vw;
+    text-shadow: 1px 0 10px green; }
+
+nav {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px; }
+  nav ul {
+    display: inline-block;
+    list-style: none; }
+    nav ul::before {
+      content: "MENU"; }
+  nav a {
+    text-decoration: none;
+    color: white; }
+  nav li {
+    display: none; }
+
+/*# sourceMappingURL=style.css.map */

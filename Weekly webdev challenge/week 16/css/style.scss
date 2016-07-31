@@ -1,8 +1,13 @@
+$mainColor: #66a900;
+$paragrafColor: #ddd;
+$fontStandard: 'PT Sans', sans-serif;
+$fontFancy: 'Poppins', sans-serif;
+
 body {
   margin: 0;
   padding: 0;
   background-color: white;
-  font-family: 'PT Sans', sans-serif;
+  font-family: $fontStandard;
   color: white;
 }
 header {
@@ -29,10 +34,13 @@ nav {
   width: 90vw;
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px;
+  padding: 5px 15px;
+  align-items: flex-start;
+  height: 10vh;
   ul {
     display: inline-block;
     list-style: none;
+    text-align: right;
     &::before {
       content: "MENU";
     }
@@ -43,5 +51,46 @@ nav {
   }
   li {
     display: none;
+    &.active {
+      display: inline-block;
+    }
+  }
+}
+section {
+  margin-top: -1px;
+  overflow-x: hidden;
+  font-family: $fontFancy;
+  .decor {
+    width: 200vw;
+  }
+  h1 {
+    text-align: center;
+    color: black;
+  }
+  strong {
+    color: $paragrafColor;
+    font-size: 1.7em;
+    font-family: $fontStandard;
+  }
+  em {
+    color: $mainColor;
+    font-style: normal;
+  }
+  p {
+    color: #bbb;
+    padding: 5vh 10vw;
+    text-align: justify;
+    text-shadow: 0 0 1px $paragrafColor;
+    z-index: 1;
+  }
+  article {
+    position: relative;
+  }
+  img {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 3;
+    top: -140px;
+    left: -150px;
   }
 }

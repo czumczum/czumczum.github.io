@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: white;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: white; }
 
 header {
@@ -27,10 +27,13 @@ nav {
   width: 90vw;
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px; }
+  padding: 5px 15px;
+  align-items: flex-start;
+  height: 10vh; }
   nav ul {
     display: inline-block;
-    list-style: none; }
+    list-style: none;
+    text-align: right; }
     nav ul::before {
       content: "MENU"; }
   nav a {
@@ -38,5 +41,38 @@ nav {
     color: white; }
   nav li {
     display: none; }
+    nav li.active {
+      display: inline-block; }
+
+section {
+  margin-top: -1px;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif; }
+  section .decor {
+    width: 200vw; }
+  section h1 {
+    text-align: center;
+    color: black; }
+  section strong {
+    color: #ddd;
+    font-size: 1.7em;
+    font-family: "PT Sans", sans-serif; }
+  section em {
+    color: #66a900;
+    font-style: normal; }
+  section p {
+    color: #bbb;
+    padding: 5vh 10vw;
+    text-align: justify;
+    text-shadow: 0 0 1px #ddd;
+    z-index: 1; }
+  section article {
+    position: relative; }
+  section img {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 3;
+    top: -140px;
+    left: -150px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,9 @@ $mainColor: #66a900;
 $paragrafColor: #ddd;
 $fontStandard: 'PT Sans', sans-serif;
 $fontFancy: 'Poppins', sans-serif;
+$firstDim: 520px;
+$seconDim: 750px;
+$thirDim: 1024px;
 
 body {
   margin: 0;
@@ -22,16 +25,40 @@ header {
   h1 {
     margin-top: 30vh;
     text-transform: uppercase;
-    padding: 0 10vw 0 5vw;
+    padding: 0 10vw 0 10vw;
     text-shadow: 3px 3px 10px green;
   }
   p {
-    padding: 0 5vw;
+    padding: 0 10vw 0 10vw;
     text-shadow: 1px 0 10px green;
+    flex: 1;
+  }
+  @media (min-width: $firstDim) {
+    h1 {
+      width: 50%;
+      margin-top: 20vh;
+    }
+    p {
+      width: 50%;
+    }
+  }
+  @media (min-width: $seconDim) {
+    h1 {
+      width: 40vw;
+    }
+    p {
+      width: 40vw;
+    }
+  }
+  @media (min-width: $thirDim) {
+    h1 {
+      font-size: 4vw;
+    }
   }
 }
 nav {
   width: 90vw;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 5px 15px;
@@ -41,6 +68,7 @@ nav {
     display: inline-block;
     list-style: none;
     text-align: right;
+    font-family: $fontStandard;
     &::before {
       content: "MENU";
     }
@@ -55,11 +83,36 @@ nav {
       display: inline-block;
     }
   }
+  @media (min-width: $firstDim) {
+    ul {
+      display: flex;
+      &::before {
+        display: none;
+      }
+    }
+    li {
+      display: inline-flex;
+      &:hover a {
+        font-weight: 700;
+      }
+      &.current a {
+        background-color: rgba(104, 168, 0, 0.5);
+        border-radius: 10%;
+      }
+      a {
+        padding: 2vh 1vw;
+      }
+    }
+  }
+  @media (min-width: $seconDim) {
+    width: 80vw;
+  }
 }
 section {
   margin-top: -1px;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: $fontFancy;
+  height: 100vh;
   .decor {
     width: 200vw;
   }
@@ -77,7 +130,7 @@ section {
     font-style: normal;
   }
   p {
-    color: #bbb;
+    color: #999;
     padding: 5vh 10vw;
     text-align: justify;
     text-shadow: 0 0 1px $paragrafColor;
@@ -86,11 +139,43 @@ section {
   article {
     position: relative;
   }
-  img {
+  .image {
     position: absolute;
     opacity: 0.2;
-    z-index: 3;
+    z-index: -1;
     top: -140px;
     left: -150px;
+  }
+  @media (min-width: $firstDim) {
+    height: 90vh;
+    h1 {
+      width: 50%;
+    }
+    strong {
+      font-size: 2em;
+    }
+    article {
+      display: flex;
+    }
+    div {
+      width: 80vw;
+    }
+    p {
+      padding: 0 10vw;
+      text-align: left;
+      width: 50%;
+      color: $paragrafColor;
+    }
+    .image {
+      position: static;
+      opacity: 1;
+      width: 80vw;
+      margin: -30vh -20vw 0 -40vw;
+    }
+  }
+  @media (min-width: $seconDim) {
+    .image {
+      width: auto;
+    }
   }
 }

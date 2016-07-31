@@ -17,14 +17,30 @@ header {
   header h1 {
     margin-top: 30vh;
     text-transform: uppercase;
-    padding: 0 10vw 0 5vw;
+    padding: 0 10vw 0 10vw;
     text-shadow: 3px 3px 10px green; }
   header p {
-    padding: 0 5vw;
-    text-shadow: 1px 0 10px green; }
+    padding: 0 10vw 0 10vw;
+    text-shadow: 1px 0 10px green;
+    flex: 1; }
+  @media (min-width: 520px) {
+    header h1 {
+      width: 50%;
+      margin-top: 20vh; }
+    header p {
+      width: 50%; } }
+  @media (min-width: 750px) {
+    header h1 {
+      width: 40vw; }
+    header p {
+      width: 40vw; } }
+  @media (min-width: 1024px) {
+    header h1 {
+      font-size: 4vw; } }
 
 nav {
   width: 90vw;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 5px 15px;
@@ -33,7 +49,8 @@ nav {
   nav ul {
     display: inline-block;
     list-style: none;
-    text-align: right; }
+    text-align: right;
+    font-family: "PT Sans", sans-serif; }
     nav ul::before {
       content: "MENU"; }
   nav a {
@@ -43,11 +60,29 @@ nav {
     display: none; }
     nav li.active {
       display: inline-block; }
+  @media (min-width: 520px) {
+    nav ul {
+      display: flex; }
+      nav ul::before {
+        display: none; }
+    nav li {
+      display: inline-flex; }
+      nav li:hover a {
+        font-weight: 700; }
+      nav li.current a {
+        background-color: rgba(104, 168, 0, 0.5);
+        border-radius: 10%; }
+      nav li a {
+        padding: 2vh 1vw; } }
+  @media (min-width: 750px) {
+    nav {
+      width: 80vw; } }
 
 section {
   margin-top: -1px;
-  overflow-x: hidden;
-  font-family: "Poppins", sans-serif; }
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  height: 100vh; }
   section .decor {
     width: 200vw; }
   section h1 {
@@ -61,18 +96,42 @@ section {
     color: #66a900;
     font-style: normal; }
   section p {
-    color: #bbb;
+    color: #999;
     padding: 5vh 10vw;
     text-align: justify;
     text-shadow: 0 0 1px #ddd;
     z-index: 1; }
   section article {
     position: relative; }
-  section img {
+  section .image {
     position: absolute;
     opacity: 0.2;
-    z-index: 3;
+    z-index: -1;
     top: -140px;
     left: -150px; }
+  @media (min-width: 520px) {
+    section {
+      height: 90vh; }
+      section h1 {
+        width: 50%; }
+      section strong {
+        font-size: 2em; }
+      section article {
+        display: flex; }
+      section div {
+        width: 80vw; }
+      section p {
+        padding: 0 10vw;
+        text-align: left;
+        width: 50%;
+        color: #ddd; }
+      section .image {
+        position: static;
+        opacity: 1;
+        width: 80vw;
+        margin: -30vh -20vw 0 -40vw; } }
+  @media (min-width: 750px) {
+    section .image {
+      width: auto; } }
 
 /*# sourceMappingURL=style.css.map */

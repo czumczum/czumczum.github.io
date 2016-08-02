@@ -1,10 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  font-family: "PT Sans", sans-serif;
-  color: white; }
-
 header {
   background: url("../img/header.jpg") no-repeat center top;
   background-size: cover;
@@ -78,9 +71,6 @@ nav {
     nav {
       width: 80vw; } }
 
-.decor {
-  width: 200vw; }
-
 section {
   margin-top: -1px;
   font-family: "Poppins", sans-serif;
@@ -88,6 +78,8 @@ section {
   overflow-x: hidden;
   min-height: 560px;
   position: relative; }
+  section .decor {
+    width: 200vw; }
   section article {
     display: flex;
     flex-direction: column; }
@@ -207,5 +199,12 @@ section {
         width: auto; }
       #About2 article {
         order: 2; } }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "PT Sans", sans-serif;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */

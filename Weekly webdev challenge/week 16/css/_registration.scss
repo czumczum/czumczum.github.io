@@ -1,0 +1,63 @@
+.register {
+  background-image: url("../img/decor-2.gif");
+  display: flex;
+  flex-direction: column;
+  height: 41vh;
+  align-items: flex-start;
+  padding-top: 3vh;
+  padding-bottom: 4vh;
+  h2 {
+    font-size: 2em;
+    font-weight: 200;
+    text-align: center;
+    text-shadow: 1px 1px 10px green;
+  }
+  p {
+    font-weight: 200;
+    text-align: center;
+  }
+  .arrow {
+    display: none;
+  }
+  a {
+    color: $mainColor;
+    text-decoration: none;
+    width: 220px;
+    display: flex;
+    background: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border-radius: 7%;
+    font-family: $fontFancy;
+    margin: 1vh auto;
+  }
+  @media (min-width: $firstDim) {
+    height: 35vh;
+    padding-top: 10vh;
+    padding-bottom: 0vh;
+  }
+  @media (min-width: $seconDim) {
+    flex-direction: row;
+    div {
+      width: 50vw;
+    }
+    .arrow {
+      display: inline-block;
+      align-self: center;
+    }
+    a {
+      align-self: center;
+      margin-right: 2vw;
+    }
+  }
+  @media (min-width: $thirDim) {
+    height: 30vh;
+    a {
+      margin-right: auto;
+      margin-left: 2vw;
+      width: 270px;
+    }
+  }
+}

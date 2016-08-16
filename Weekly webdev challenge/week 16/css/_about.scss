@@ -101,6 +101,9 @@ section {
     }
   }
   @media (min-width: $seconDim) {
+    .decor {
+      width: auto;
+    }
     .image {
       width: auto;
       height: auto;
@@ -109,7 +112,7 @@ section {
     .image2 {
       order: 1;
       margin: 0vh -25vw 0 -5vw;
-      height: 80vh;
+      height: 70vh;
     }
     div {
       display: flex;
@@ -138,7 +141,7 @@ section {
     }
     .image2 {
       width: auto;
-      margin: -15vh -5vw 0 0vw;
+      margin: -10vh -5vw 0 0vw;
     }
   }
   @media (orientation:landscape) and (max-width: $seconDim) {

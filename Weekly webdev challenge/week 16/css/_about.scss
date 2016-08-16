@@ -1,6 +1,5 @@
 section {
   margin-top: -1px;
-  font-family: $fontFancy;
   height: auto;
   overflow-x: hidden;
   min-height: 560px;
@@ -15,10 +14,12 @@ section {
   h1 {
     color: black;
     padding: 0 0 0 10vw;
+    font-family: $fontFancy;
+    font-size: 1.7em;
   }
   strong {
     color: $paragrafColor;
-    font-size: 1.7em;
+    font-size: 2em;
     font-family: $fontStandard;
   }
   em {
@@ -26,7 +27,7 @@ section {
     font-style: normal;
   }
   p {
-    color: #999;
+    color: $darkenColor;
     padding: 5vh 10vw;
     text-align: justify;
     text-shadow: 0 0 1px $paragrafColor;
@@ -41,16 +42,9 @@ section {
     padding: 0 10vw;
     li {
       padding: 1vh 0;
-    }
-    span {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      background-color: $mainColor;
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-      color: white;
+      span {
+        @extend .roundSpan;
+      }
     }
   }
   article {
@@ -73,9 +67,6 @@ section {
   @media (min-width: $firstDim) {
     div {
       display: flex;
-    }
-    strong {
-      font-size: 2em;
     }
     article {
       width: 80vw;
@@ -121,9 +112,6 @@ section {
   @media (min-width: $thirDim) {
     h1 {
       font-size: 1.5em;
-    }
-    strong {
-      font-size: 2em;
     }
     article {
       width: 50vw;

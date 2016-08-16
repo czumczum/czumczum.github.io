@@ -2,15 +2,16 @@
   background-image: url("../img/decor-2.gif");
   display: flex;
   flex-direction: column;
-  height: 41vh;
+  height: 37vh;
+  max-height: 250px;
   align-items: flex-start;
   padding-top: 3vh;
-  padding-bottom: 4vh;
   h2 {
     font-size: 2em;
     font-weight: 200;
     text-align: center;
     text-shadow: 1px 1px 10px green;
+    margin: 2vh;
   }
   p {
     font-weight: 200;
@@ -28,7 +29,8 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 9vh;
+    max-height: 70px;
     border-radius: 7%;
     font-family: $fontFancy;
     margin: 1vh auto;

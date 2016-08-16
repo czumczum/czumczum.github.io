@@ -305,6 +305,26 @@ section {
       padding: 1vh 1vw 1vh 4vw; }
   section h3 {
     padding-left: 0; } }
+.carousel {
+  display: none; }
+
+.name, .desc {
+  margin: 0 10vw;
+  padding: 0; }
+
+.name {
+  font-weight: 600;
+  color: black; }
+
+#Testimonial {
+  min-height: unset;
+  position: relative; }
+
+.background {
+  opacity: 0.3;
+  position: absolute;
+  top: 0; }
+
 body {
   margin: 0;
   padding: 0;

@@ -815,7 +815,7 @@ header section {
       max-height: 80vh; } }
   header section::after {
     content: "";
-    background-image: url(../../../img/header-people.jpg);
+    background-image: url(../../public/img/header-people.jpg);
     background-size: 100%;
     opacity: 0.1;
     top: 0;

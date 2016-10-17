@@ -1,0 +1,47 @@
+/**
+*
+* Button
+*
+**/
+input[type="submit"] {
+    background: none;
+    font-family: acumin-pro, sans-serif;
+    display: block;
+    color: white;
+    margin: 1em auto 0 auto;
+}
+.btn {
+    @include inline-block();
+    padding: .7em 1.5em;
+    transition: background 1s ease;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.link-button {
+    font-weight: 400;
+    padding: 5px;
+    border: 1px solid white;
+    &:hover {
+        background: rgba(94,0,152,0.5);
+    }
+}
+
+// Size
+.btn--big {
+    font-size: 1.5em;
+}
+
+.btn--small {
+    font-size: 1em;
+}
+
+// Colour
+.btn--black {
+    background: #000;
+    color: #fff;
+
+    &:hover {
+        background: #666;
+    }
+}

@@ -1,0 +1,25 @@
+.form {
+    background-color: $colorThemeLight;
+    padding-bottom: 1em;
+    h1 {
+        margin-top: 0;
+        @include headertextfont(2.5em);
+        padding-top: 1.5em;
+        color: white;
+        text-shadow: 0 0 3px 0 darken($colorThemeLight, 20%);
+    }
+    label, input {
+        font-family: acumin-pro, sans-serif;
+        color: white;
+        text-align: left;
+    }
+    .company {
+        width: 100%;
+        max-width: 600px;
+        padding: 0 1em;
+        @include mediaquery(mobile) {
+            width: 80vw;
+            padding: 0;
+        }
+    }
+}

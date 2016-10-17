@@ -1,0 +1,67 @@
+.panel {
+    background-color: white;
+    font-family: futura-pt, sans-serif;
+    position: relative;
+    min-height: 350px;
+    @include mediaquery(gt_tablet) {
+        justify-content: center;
+    }
+    &:nth-of-type(2n) {
+        background-color: $colorLightBg;
+        img {
+            padding-bottom: 2em;
+        }
+    }
+    &:nth-of-type(2n) {
+        .triangle {
+            border-color: $colorLightBg transparent transparent transparent;
+        }
+    }
+    .main-flex {
+        align-items: flex-start;
+        margin-bottom: 0em;
+        @include mediaquery(gt_tablet) {
+            justify-content: center;
+        }
+    }
+    article {
+        max-width: 290px;
+        text-align: left;
+        margin: 2em 2em 2em 2em;
+    }
+    h1 {
+        color: $colorDark;
+        size: 2em;
+        font-weight: 400;
+        margin: 0;
+        padding-top: 1em;
+    }
+    h2 {
+        color: $colorThemeLight;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+    p {
+        font-size: 0.9em;
+        position: relative;
+        font-family: acumin-pro, sans-serif;
+        span {
+            display: block;
+            color: $colorThemeLight;
+        }
+    }
+    .padding {
+        padding-left: 2em;
+        font-family: futura-pt, sans-serif;
+    }
+    a {
+        font-size: 0.9em;
+        padding: 0 2em;
+        color: $colorThemeLight;
+        font-family: acumin-pro, sans-serif;
+    }
+    img {
+        max-width: 250px;
+        margin: 3em;
+    }
+}

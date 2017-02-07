@@ -1,0 +1,47 @@
+.l-menu {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 20%;
+
+  background-color: rgba(0,0,0,0.4);
+
+  &__icons {
+    display: inline-block;
+    width: 200px;
+
+    text-align: center;
+
+    &__item {
+      margin: 0 0.5em;
+      cursor: pointer;
+
+      transition: 0.3s ease opacity;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__burger {
+    position: absolute;
+    top: calc(50% - 0.8em);
+    right: 5%;
+
+    cursor: pointer;
+
+    path {
+      transition: 0.3s ease opacity;
+
+    }
+
+    &:hover path {
+      opacity: 1;
+    }
+  }
+}

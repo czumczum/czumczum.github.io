@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Rambla:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/main.css">
+    <title>Audio Player</title>
+</head>
+<body>
+<div class="content">
+    <div class="l-main" id="playback">
+        <div class="box-image" data-id="song1">
+            <nav class="l-menu">
+                <div class="l-menu__icons">
+                    <svg class="l-menu__icons__item"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="0.6cm" height="0.564cm">
+                        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                              d="M3.969,13.120 L3.969,15.279 L0.500,11.857 L3.969,8.436 L3.969,10.595 L13.939,10.595 L13.939,8.813 L16.500,6.289 L16.500,10.595 L16.500,12.526 L16.500,13.120 L3.969,13.120 ZM13.030,4.967 L3.060,4.967 L3.060,6.748 L0.500,9.273 L0.500,2.442 L13.030,2.442 L13.030,0.284 L16.500,3.704 L13.030,7.126 L13.030,4.967 Z"/>
+                    </svg>
+                    <svg class="l-menu__icons__item"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="0.6cm" height="0.564cm">
+                        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                              d="M16.498,3.818 L13.029,7.259 L13.029,5.087 L10.072,5.087 L8.592,2.549 L13.029,2.549 L13.029,0.378 L16.498,3.818 ZM13.018,10.662 L13.018,8.491 L16.487,11.931 L13.018,15.372 L13.018,13.200 L9.226,13.200 L9.226,13.198 L9.223,13.200 L4.500,5.087 L0.502,5.087 L0.502,2.549 L5.972,2.549 L5.972,2.553 L5.977,2.549 L10.701,10.662 L13.018,10.662 ZM6.606,13.200 L0.502,13.200 L0.502,10.662 L5.125,10.662 L6.606,13.200 Z"/>
+                    </svg>
+                    <svg class="l-menu__icons__item"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="0.6cm" height="0.6cm">
+                        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                              d="M16.397,7.230 L13.898,7.230 C13.996,7.645 14.047,8.073 14.047,8.509 C14.047,9.258 13.900,9.983 13.611,10.664 C13.332,11.324 12.932,11.917 12.422,12.427 C11.911,12.935 11.318,13.336 10.658,13.615 C9.976,13.903 9.250,14.049 8.500,14.049 C7.750,14.049 7.023,13.903 6.342,13.615 C5.682,13.336 5.088,12.935 4.577,12.427 C4.067,11.917 3.667,11.324 3.388,10.664 C3.100,9.983 2.953,9.258 2.953,8.509 C2.953,7.759 3.100,7.034 3.388,6.352 C3.667,5.693 4.067,5.100 4.577,4.591 C5.088,4.081 5.682,3.680 6.342,3.402 C7.023,3.113 7.750,2.968 8.500,2.968 C9.250,2.968 9.976,3.113 10.658,3.402 C10.948,3.524 11.225,3.671 11.488,3.839 L9.923,5.402 L14.830,5.402 L14.830,0.500 L13.250,2.078 C11.922,1.097 10.278,0.516 8.500,0.516 C4.081,0.516 0.500,4.095 0.500,8.509 C0.500,12.922 4.081,16.500 8.500,16.500 C12.918,16.500 16.500,12.922 16.500,8.509 C16.500,8.073 16.465,7.646 16.397,7.230 Z"/>
+                    </svg>
+                </div>
+                <div id="burgerMenu" class="l-menu__burger">
+                    <svg class="l-menu__burger__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="0.6cm" height="0.494cm">
+                        <path fill-rule="evenodd"  opacity="0.302" fill="rgb(255, 255, 255)"
+                              d="M0.500,13.681 L0.500,11.084 L16.500,11.084 L16.500,13.681 L0.500,13.681 ZM0.500,5.889 L16.500,5.889 L16.500,8.486 L0.500,8.486 L0.500,5.889 ZM0.500,0.693 L16.500,0.693 L16.500,3.291 L0.500,3.291 L0.500,0.693 Z"/>
+                    </svg>
+                </div>
+
+            </nav>
+            <div class="l-menu">
+                <div class="box-image__title">
+                    <p class="js-artist text-bold bigger-text">Icona Pop</p>
+                    <p class="js-title">Still don't know</p>
+                </div>
+            </div>
+
+        </div>
+        <section class="l-main__navigation">
+            <div class="volume">
+                <div class="volume__pointer">
+                    <svg class="volume__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="0.459cm" height="0.353cm">
+                        <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                              d="M11.111,7.902 L10.338,7.130 C10.670,6.764 10.933,6.346 11.119,5.883 C11.327,5.369 11.431,4.824 11.431,4.260 C11.431,3.697 11.327,3.150 11.119,2.635 C10.933,2.174 10.670,1.754 10.338,1.389 L11.111,0.615 C11.972,1.565 12.500,2.848 12.500,4.260 C12.500,5.670 11.972,6.953 11.111,7.902 ZM9.768,6.558 L8.995,5.785 C9.369,5.370 9.573,4.832 9.573,4.260 C9.573,3.687 9.369,3.148 8.995,2.733 L9.768,1.961 C10.309,2.560 10.642,3.369 10.642,4.260 C10.642,5.150 10.309,5.959 9.768,6.558 ZM3.794,2.343 L7.747,0.063 L7.747,9.062 L3.794,7.174 L3.794,2.343 ZM0.500,6.484 L0.500,3.034 C0.500,2.652 0.794,2.343 1.158,2.343 L3.135,2.343 L3.135,7.174 L1.158,7.174 C0.794,7.174 0.500,6.865 0.500,6.484 Z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="playback">
+                <div class="btn playback__share">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="0.459cm" height="0.459cm">
+                        <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                              d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                    </svg>
+                </div>
+                <div class="playback__nav">
+                    <span class="btn btn--purple js-prev">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="0.459cm" height="0.459cm">
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+      d="M2.881,6.500 L12.500,0.500 L12.500,12.500 L2.881,6.500 ZM0.500,12.477 L0.500,0.500 L2.881,0.500 L2.881,6.500 L2.881,12.477 L0.500,12.477 Z"/>
+</svg>
+                    </span>
+                    <span class="btn btn--purple btn--big playback__play" id="pauseBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="0.6cm" height="0.6cm" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve">
+                            <g>
+                                <g id="pause">
+                                    <path d="M25.5,357h102V0h-102V357z M229.5,0v357h102V0H229.5z" fill="#FFFFFF"/>
+                                </g>
+                        </svg>
+                    </span>
+                    <span class="btn btn--purple btn--big hidden playback__play" id="playBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                             id="Capa_1" x="0px" y="0px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve"
+                        width="0.6cm" height="0.6cm">
+                        <g>
+                            <g id="play-arrow">
+                                <polygon points="38.25,0 38.25,357 318.75,178.5   " fill="#FFFFFF"/>
+                            </g>
+                        </svg>
+                    </span>
+                    <span class="btn btn--purple js-next">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                              d="M10.118,12.500 L10.118,6.500 L10.118,0.522 L12.500,0.522 L12.500,12.500 L10.118,12.500 ZM0.500,0.500 L10.118,6.500 L0.500,12.500 L0.500,0.500 Z"/>
+                        </svg>
+                    </span>
+
+                </div>
+                <div class="btn playback__like">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="0.529cm" height="0.423cm">
+                        <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                              d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="l-main hidden" id="playlist">
+        <section class="playlist">
+            <header class="l-header">
+                <svg id="backBtn" class="btn l-header__back"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     width="0.564cm" height="0.388cm">
+                    <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                          d="M0.000,5.122 L6.133,-0.006 L6.133,2.425 C10.913,2.758 14.854,6.299 16.000,11.005 C14.068,8.955 11.382,7.683 8.411,7.683 C7.629,7.683 6.867,7.691 6.133,7.812 L6.133,10.249 L0.000,5.122 Z"/>
+                </svg>
+                <h2 class="headline playlist__headline">Playlist</h2>
+            </header>
+            <div class="playlist__content">
+                <a href="#" class="playlist__item" id="song1"
+                   id="song1"
+                data-image="img/icona-pop.png">
+                    <div class="playlist__item__column">
+                        <p class="breadcrumbs">
+                            <span class="playlist__time">3:16</span>
+                            <span class="playlist__artist">Icona Pop</span>
+                        </p>
+                        <p class="playlist__song">Still don't know</p>
+                    </div>
+                    <div class="playlist__item__column">
+                        <p>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                                <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                                      d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                            </svg>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.529cm" height="0.423cm">
+                                <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                                      d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="playlist__item" id="song2"
+                   data-image="img/icona-pop.jpg">
+                    <div class="playlist__item__column">
+                        <p class="breadcrumbs">
+                            <span class="playlist__time">3:16</span>
+                            <span class="playlist__artist">Icona Pop</span>
+                        </p>
+                        <p class="playlist__song">Love It</p>
+                    </div>
+                    <div class="playlist__item__column">
+                        <p>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                                <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                                      d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                            </svg>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.529cm" height="0.423cm">
+                                <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                                      d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="playlist__item" id="song3"
+                   data-image="img/icona-pop.png">
+                    <div class="playlist__item__column">
+                        <p class="breadcrumbs">
+                            <span class="playlist__time">3:16</span>
+                            <span class="playlist__artist">Icona Pop</span>
+                        </p>
+                        <p class="playlist__song">Girlfriend</p>
+                    </div>
+                    <div class="playlist__item__column">
+                        <p>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                                <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                                      d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                            </svg>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.529cm" height="0.423cm">
+                                <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                                      d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="playlist__item" id="song4"
+                   data-image="img/icona-pop.jpg">
+                    <div class="playlist__item__column">
+                        <p class="breadcrumbs">
+                            <span class="playlist__time">3:16</span>
+                            <span class="playlist__artist">Icona Pop</span>
+                        </p>
+                        <p class="playlist__song">We got the World</p>
+                    </div>
+                    <div class="playlist__item__column">
+                        <p>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                                <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                                      d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                            </svg>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.529cm" height="0.423cm">
+                                <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                                      d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="playlist__item" id="song5"
+                   data-image="img/icona-pop.png">
+                    <div class="playlist__item__column">
+                        <p class="breadcrumbs">
+                            <span class="playlist__time">3:16</span>
+                            <span class="playlist__artist">Icona Pop</span>
+                        </p>
+                        <p class="playlist__song">The Nights like this</p>
+                    </div>
+                    <div class="playlist__item__column">
+                        <p>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                                <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                                      d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                            </svg>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.529cm" height="0.423cm">
+                                <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                                      d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="playlist__item" id="song6"
+                   data-image="img/icona-pop.png">
+                    <div class="playlist__item__column">
+                        <p class="breadcrumbs">
+                            <span class="playlist__time">3:16</span>
+                            <span class="playlist__artist">Icona Pop</span>
+                        </p>
+                        <p class="playlist__song">Still don't know</p>
+                    </div>
+                    <div class="playlist__item__column">
+                        <p>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                                <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                                      d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                            </svg>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.529cm" height="0.423cm">
+                                <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                                      d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="playlist__item" id="song7"
+                   data-image="img/icona-pop.png">
+                    <div class="playlist__item__column">
+                        <p class="breadcrumbs">
+                            <span class="playlist__time">3:16</span>
+                            <span class="playlist__artist">Icona Pop</span>
+                        </p>
+                        <p class="playlist__song">Love It</p>
+                    </div>
+                    <div class="playlist__item__column">
+                        <p>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                                <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                                      d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                            </svg>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.529cm" height="0.423cm">
+                                <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                                      d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="playlist__item" id="song8"
+                   data-image="img/icona-pop.png">
+                    <div class="playlist__item__column">
+                        <p class="breadcrumbs">
+                            <span class="playlist__time">3:16</span>
+                            <span class="playlist__artist">Icona Pop</span>
+                        </p>
+                        <p class="playlist__song">Girlfriend</p>
+                    </div>
+                    <div class="playlist__item__column">
+                        <p>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                                <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                                      d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                            </svg>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.529cm" height="0.423cm">
+                                <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                                      d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="playlist__item" id="song9"
+                   data-image="img/icona-pop.png">
+                    <div class="playlist__item__column">
+                        <p class="breadcrumbs">
+                            <span class="playlist__time">3:16</span>
+                            <span class="playlist__artist">Icona Pop</span>
+                        </p>
+                        <p class="playlist__song">We got the World</p>
+                    </div>
+                    <div class="playlist__item__column">
+                        <p>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                                <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                                      d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                            </svg>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.529cm" height="0.423cm">
+                                <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                                      d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="playlist__item" id="song10"
+                   data-image="img/icona-pop.png">
+                    <div class="playlist__item__column">
+                        <p class="breadcrumbs">
+                            <span class="playlist__time">3:16</span>
+                            <span class="playlist__artist">Icona Pop</span>
+                        </p>
+                        <p class="playlist__song">The Nights like this</p>
+                    </div>
+                    <div class="playlist__item__column">
+                        <p>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.459cm" height="0.459cm">
+                                <path fill-rule="evenodd"  fill="rgb(96, 85, 143)"
+                                      d="M10.200,7.899 C9.547,7.899 8.958,8.172 8.539,8.609 L5.070,6.875 C5.089,6.754 5.100,6.629 5.100,6.500 C5.100,6.371 5.089,6.246 5.069,6.125 L8.539,4.391 C8.958,4.828 9.547,5.102 10.200,5.102 C11.470,5.102 12.500,4.070 12.500,2.801 C12.500,1.531 11.470,0.500 10.200,0.500 C8.930,0.500 7.900,1.531 7.900,2.801 C7.900,2.930 7.911,3.051 7.930,3.176 L4.461,4.911 C4.042,4.473 3.453,4.199 2.800,4.199 C1.530,4.199 0.500,5.231 0.500,6.500 C0.500,7.770 1.530,8.801 2.800,8.801 C3.453,8.801 4.042,8.527 4.461,8.090 L7.930,9.824 C7.911,9.950 7.900,10.074 7.900,10.199 C7.900,11.469 8.930,12.500 10.200,12.500 C11.470,12.500 12.500,11.469 12.500,10.199 C12.500,8.930 11.470,7.899 10.200,7.899 Z"/>
+                            </svg>
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="0.529cm" height="0.423cm">
+                                <path fill-rule="evenodd"  fill="rgb(237, 94, 116)"
+                                      d="M14.497,3.805 C14.429,1.705 12.816,-0.000 10.743,-0.000 C9.360,-0.000 8.152,0.757 7.500,1.883 C6.848,0.757 5.640,-0.000 4.257,-0.000 C2.183,-0.000 0.570,1.705 0.503,3.805 C0.347,8.566 7.500,12.000 7.500,12.000 C7.500,12.000 14.652,8.566 14.497,3.805 Z"/>
+                            </svg>
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="l-footer"></div>
+        </section>
+    </div>
+
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

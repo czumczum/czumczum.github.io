@@ -1,0 +1,17 @@
+@import "components";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 700px;
+  overflow: hidden;
+  font-family: 'Rambla', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

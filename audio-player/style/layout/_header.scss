@@ -1,0 +1,18 @@
+.l-header {
+    @extend %background-opacity;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    z-index: 1;
+    height: 20%;
+
+  &__back {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    padding: 0.7em 0.3em 0.5em 0.6em;
+
+  }
+}

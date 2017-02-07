@@ -1,0 +1,41 @@
+.playback {
+  width: 100%;
+  height: 50%;
+  padding-top: 5%;
+
+  text-align: center;
+
+  &__share {
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: 8%;
+
+    float: left;
+  }
+
+  &__nav {
+    display: inline-block;
+    width: 200px;
+    margin-top: 5%;
+
+    text-align: center;
+
+    > .btn {
+      display: inline-block;
+      transition: 0.5s ease opacity;
+
+      &:not(:first-of-type) {
+        margin-left: 10%;
+      }
+    }
+  }
+  &__like {
+    display: inline-block;
+    float: right;
+
+    margin-top: 8%;
+    margin-right: 10%;
+    padding: 0.6em 0.3em 0.4em 0.6em;
+  }
+
+}

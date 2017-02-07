@@ -1,0 +1,10 @@
+.l-footer {
+  @extend %background-opacity;
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 80px;
+
+  transform: rotate(180deg);
+}

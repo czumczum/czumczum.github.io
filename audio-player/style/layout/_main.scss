@@ -1,0 +1,21 @@
+.l-main {
+  width: 95%;
+  height: 95%;
+  max-width: 400px;
+  max-height: 600px;
+
+  background-color: $colorGray;
+  border-radius: 10%;
+
+  overflow: hidden;
+
+  transition: 0.5s ease opacity, 0.5s ease transform;
+
+  &.hidden {
+    transform: translateY(100%);
+  }
+
+  &__navigation {
+    height: 25%;
+  }
+}

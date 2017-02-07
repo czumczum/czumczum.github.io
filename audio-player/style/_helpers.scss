@@ -1,0 +1,15 @@
+.text-bold {
+  font-weight: 700;
+}
+
+.bigger-text {
+  font-size: 1.2em;
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
+
+  z-index: -99;
+
+}

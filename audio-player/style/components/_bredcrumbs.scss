@@ -1,0 +1,9 @@
+.breadcrumbs {
+    font-size: 0.8em;
+
+    color: darken($colorGray, 40%);
+
+    > *:not(:last-child)::after {
+        content: ' | ';
+    }
+}

@@ -1,0 +1,77 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import 'components/bar.scss';
+@import 'components/item.scss';
+@import 'components/forms.scss';
+@import 'components/single-item.scss';
+
+/* General */
+html, body {
+  margin: 0;
+}
+
+.container {
+    background: #fafafa;
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    color: #333;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+p {
+    margin: 0;
+}
+
+.section {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.emphasis {
+  font-family: serif;
+  font-style: italic;
+  font-size: 1.3em;
+  
+  margin: 5% 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.hidden-radio input {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.horizontal-center {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    text-decoration: none;
+    background-color: #ccc;
+    border: 1px solid #777;
+    border-radius: 5px;
+    box-shadow: -2px 2px 3px #ddd;
+
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+}

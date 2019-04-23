@@ -1,0 +1,27 @@
+<div class="page-container" ng-controller="CriticsController as critics" ng-cloak>
+
+<section id="critics">
+  <ul class="section">
+
+    <!-- item controller -->
+    <li class="item" ng-repeat="critic in critics.criticsList">
+      <div>
+        <h2>{{ critic.display_name }}</h2>
+        <p>Reviews: {{ critics.reviewsCount(critic.display_name) }}</p>
+        <p>Critic's picks: {{ critics.picksCount(critic.display_name) }}</p>
+      </div>
+      <div>
+        <figure ng-class="critic.multimedia.resource.src ? '' : 'hidden'">
+          <img src="{{ critic.multimedia.resource.src }}">
+        </figure>
+        <article ng-class="critic.bio ? '' : 'hidden'">
+          <h3>Bio</h3>
+          <p>{{ critic.bio }}</p>
+        </article>
+      </div>
+    </li>
+
+  </ul>
+
+  </section>
+</div>

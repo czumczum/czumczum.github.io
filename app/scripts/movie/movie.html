@@ -1,0 +1,34 @@
+<div ng-controller="MovieController as mc" class="single-item">
+  <div class="single-item__header">
+      <div>
+          <h2> {{ mc.movie.display_title }}
+            <span class="relative">&nbsp;
+              <span class="item__index">{{ mc.movie.mpaa_rating }}</span>
+              </span>
+          </h2>
+          <p ng-class="mc.movie.critics_pick ? 'emphasis' : 'hidden'">* Critic's pick *</p>
+        </div>
+        <figure>
+            <img src="{{ mc.movie.multimedia.src }}">
+          </figure>
+  </div>
+  <article>
+    <h3>{{ mc.movie.headline }}</h3>
+    <h4 class="subheader">{{ mc.capitalize(mc.movie.byline) }}</h4>
+    <p>{{ mc.movie.summary_short }}</p>
+    <p class="read-more">
+      <a href="{{ mc.movie.link.url }}">{{ mc.movie.link.suggested_link_text }}</a>
+    </p>
+  </article>
+  <div class="center">
+  <a class="button"
+  ui-sref="home({ search: { term: mc.params.search.term,
+    rating: mc.params.search.rating,
+    date: mc.params.search.date,
+    pick: mc.params.search.pick } })">
+    Back
+  </a>
+  </div>
+      
+    
+    </div>

@@ -1,0 +1,101 @@
+<div class="page-container" ng-controller="MainController as main">
+<!-- bar controller -->
+  <div class="bar bar--gray">
+
+  <div class="search">
+    <!-- search controller -->
+    <p>Search by title</p>
+    <input type="text" ng-model='main.searchTitle' placeholder="Title"/>
+  </div>
+
+  <div>
+     <!-- rating controller -->
+    <p>MPAA Rating</p>
+    <select name="rating" ng-model='main.searchRating'>
+      <option value="">--ALL--</option>
+      <option value="G">G</option>
+      <option value="PG">PG</option>
+      <option value="PG-13">PG-13</option>
+      <option value="R">R</option>
+      <option value="NC-17">NC-17</option>
+    </select>
+  </div>
+
+  <div>
+      <!-- date controller -->
+     <p>Publication date</p>
+     <input type="date" name="publication-date" ng-model='main.searchDate'>
+   </div>
+
+   <div class="horizontal-center">
+      <!-- critics' picks controller -->
+      <input class="checkbox" type="checkbox" name="critics-pick" ng-model="main.searchPick"/>
+      <span>Critic's picks</span>
+   </div>
+
+  </div>
+
+<!-- bar controller -->
+<div class="bar">
+  <p>Showing results per page&nbsp;</p>
+
+  <form class="hidden-radio" ng-init="limit=20">
+    <label ng-class="limit == 20 ? 'bold' : ''">
+      <input type="radio" name="item-limit" ng-model="limit" ng-value="20" />
+      20
+    </label>
+    <label ng-class="limit == 30 ? 'bold' : ''">
+      <input type="radio" name="item-limit" ng-model="limit" ng-value="30" />
+        30
+      </label>
+    <label ng-class="limit == 40 ? 'bold' : ''">
+      <input type="radio" name="item-limit" ng-model="limit" ng-value="40" />
+        40
+    </label>
+    <label ng-class="limit == 50 ? 'bold' : ''">
+        <input type="radio" name="item-limit" ng-model="limit" ng-value="50" />
+        50
+      </label>     
+  </form>
+</div>
+
+<section id="reviews">
+  <ul class="section">
+
+    <!-- item controller -->
+    <li class="item" ng-repeat="movie in main.movies 
+    | filter:{ display_title: main.searchTitle,
+              publication_date: main.searchDate ? main.searchDate.toISOString().slice(0,10) : '',
+              critics_pick: main.searchPick ? 1 : '' }: false 
+    | filter:{ mpaa_rating: main.searchRating }: main.searchRating ? true : false
+    | orderBy: 'publication_date':true
+    | limitTo: limit">
+
+        <!-- <li class="item" ng-repeat="movie in main.movies 
+    | filter:{ display_title: main.searchTitle } 
+    | searchFilter: main.searchRating:limit"> -->
+
+      <a
+      ui-sref="movie({ movieSlug: main.convertToSlug(movie.display_title),
+        routeId: movie.display_title,
+        search: { term: main.searchTitle,
+          rating: main.searchRating,
+          date: main.searchDate,
+          pick: main.searchPick }})">
+      <figure>
+        <img src="{{ movie.multimedia.src }}">
+      </figure>
+      <div>
+        <h2> {{ movie.display_title }}
+          <span class="relative">&nbsp;
+            <span class="item__index">{{ movie.mpaa_rating }}</span>
+            </span>
+        </h2>
+        <p class="date">{{ movie.publication_date }}</p>
+        <p ng-class="movie.critics_pick ? 'emphasis' : 'hidden'">* Critic's pick *</p>
+      </div>
+      </a>
+    </li>
+    </ul>
+  </section>
+</div>

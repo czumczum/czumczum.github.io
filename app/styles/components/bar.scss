@@ -1,0 +1,18 @@
+.bar {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+
+  &--gray {
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    background-color: #ccc;
+    border: 1px solid #777;
+  }
+}
+
+.bar--main {
+  display: block;
+  text-align: center;
+}
